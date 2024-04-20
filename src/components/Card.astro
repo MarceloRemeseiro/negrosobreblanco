@@ -1,61 +1,48 @@
 ---
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
-
-const { href, title, body } = Astro.props;
+const { tag, titulo, texto, bg, colorTitulo, colorTexto } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-</style>
+<div class=`bg-${bg} border border-${colorTexto} rounded-lg p-8 md:p-12`>
+  <a href="#" class="text-xl">
+    <!-- <svg
+        class="w-2.5 h-2.5 me-1.5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 20 16"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"></path>
+      </svg> -->
+    {tag}
+  </a>
+  <h2 class=`text-${colorTitulo} text-3xl font-extrabold mb-2`>
+    {titulo}
+  </h2>
+  <p class=`text-lg font-normal text-${colorTexto} mb-4`>
+    {texto}
+  </p>
+  <!-- <a
+      href="#"
+      class="text-blue-600 dark:text-blue-500 hover:underline font-medium text-lg inline-flex items-center"
+      >Read more
+      <svg
+        class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 14 10"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+      </svg>
+    </a> -->
+</div>

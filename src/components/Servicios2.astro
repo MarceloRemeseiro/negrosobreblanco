@@ -1,0 +1,58 @@
+---
+import Servicio from "./Servicio.astro";
+---
+
+<section>
+  <!-- Container -->
+  <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10">
+    <div class="mx-auto w-full max-w-3xl text-center">
+      <h2 class="text-3xl font-semibold md:text-5xl text-blanco">
+        Servicios
+      </h2>
+      <div class="mx-auto mb-8 mt-4 max-w-[528px] md:mb-12 lg:mb-16">
+        <p class="text-gris">
+          Convierte a tus visitantes en clientes con contenido que conecta, informa y persuade. Descubre cómo mis servicios de copywriting pueden ayudarte a alcanzar tus objetivos de marketing y ventas.
+        </p>
+      </div>
+    </div>
+    <!-- Component -->
+    <div class="grid grid-cols-1 items-center gap-12 sm:gap-20 lg:grid-cols-2">
+      <!-- Image Div -->
+      <div
+        class="relative left-4 h-full max-h-[560px] w-[85%] overflow-visible md:left-0 md:w-[95%] lg:w-full"
+      >
+        <img
+          src="./svgs/typewriter.svg"
+          alt=""
+          class="z-10 mx-auto block h-full w-full max-w-[800px]  rounded-2xl object-contain"
+        />
+        <div
+          class="absolute bottom-0 left-[-16px] right-0 top-4 -z-10 h-full w-full rounded-2xl bg-black"
+        >
+        </div>
+      </div>
+      <!-- Features Div -->
+      <div
+        class="md:mx-w-auto grid h-full w-full max-w-[720px] gap-2 sm:grid-cols-2 md:gap-8"
+      >
+        <!-- Feature Item -->
+        <Servicio
+          titulo="Copywriting para tu Sitio Web"
+          texto="Mediante un detallado análisis de tu público objetivo, elaboro contenidos para tu página que garantizan capturar el interés de todo aquel que te descubra por primera vez. ¡Da el primer paso hacia el éxito en ventas!"
+        />
+        <Servicio
+          titulo="Email marketing"
+          texto="Transforma tus listas de contactos en clientes leales mediante correos que no solo capturan la atención sino que también entretienen, cuentan historias cautivadoras, persuaden y, naturalmente, incitan a la acción. ¡Es hora de elevar tus ventas!"
+        />
+        <Servicio
+          titulo="Copywriting para Landing Pages"
+          texto="La simplicidad a menudo marca el camino hacia el éxito, especialmente cuando se busca resaltar un producto o servicio específico. Permíteme redactar el contenido de tus landing pages para potenciar tus ventas. ¡Descubre cómo las palabras precisas pueden transformar visitantes en clientes"
+        />
+        <Servicio
+          titulo="Copywriting para blogs"
+          texto="En el arte de conectar e informar, un blog bien escrito es tu mejor aliado. Me especializo en crear entradas de blog que no solo informan y educan, sino que también entretienen y enganchan a tu audiencia, al tiempo que refuerzan la presencia en línea de tu marca. Con contenido relevante y atractivo, atrae a tu público objetivo y fomenta una comunidad fiel. ¡Haz que cada publicación cuente y ve crecer tu impacto digital!"
+        />
+      </div>
+    </div>
+  </div>
+</section>
