@@ -3,7 +3,7 @@
 # Nombres fijos
 CONTAINER_NAME=negrosobreblanco
 IMAGE_NAME=negrosobreblanco
-GIT_REPO=https://github.com/MarceloRemeseiro/negrosobreblanco.git  # Asegúrate de actualizar esta ruta
+SCRIPT_DIR=$(dirname "$0")  # Obtiene el directorio del script
 
 # Detener y eliminar el contenedor
 echo "Deteniendo y eliminando el contenedor actual..."
@@ -16,7 +16,7 @@ docker rmi $IMAGE_NAME
 
 # Actualizar el código fuente
 echo "Actualizando el código fuente desde Git..."
-cd $GIT_REPO
+cd $SCRIPT_DIR
 git pull
 
 # Reconstruir la imagen Docker
@@ -25,6 +25,7 @@ docker build -t $IMAGE_NAME .
 
 # Iniciar el nuevo contenedor
 echo "Iniciando el nuevo contenedor..."
-docker run -d --name negrosobreblanco --restart=always -p 1000:8080 $CONTAINER_NAME $IMAGE_NAME
+docker run -d --name $CONTAINER_NAME --restart=always -p 1000:8080 $IMAGE_NAME
 
 echo "Actualización completada y contenedor reiniciado."
+
