@@ -2,7 +2,7 @@
 
 # Nombres fijos
 CONTAINER_NAME=negrosobreblanco
-IMAGE_NAME=negrosobreblanco.latest
+IMAGE_NAME=negrosobreblanco
 GIT_REPO=https://github.com/MarceloRemeseiro/negrosobreblanco.git  # Asegúrate de actualizar esta ruta
 
 # Detener y eliminar el contenedor
