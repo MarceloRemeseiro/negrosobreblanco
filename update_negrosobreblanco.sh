@@ -25,6 +25,6 @@ docker build -t $IMAGE_NAME .
 
 # Iniciar el nuevo contenedor
 echo "Iniciando el nuevo contenedor..."
-docker run -d --name $CONTAINER_NAME $IMAGE_NAME
+docker run -d --name --restart=always -p 1000:8080 $CONTAINER_NAME $IMAGE_NAME
 
 echo "Actualización completada y contenedor reiniciado."
