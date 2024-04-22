@@ -27,5 +27,9 @@ docker build -t $IMAGE_NAME .
 echo "Iniciando el nuevo contenedor..."
 docker run -d --name $CONTAINER_NAME --restart=always -p 1000:8080 $IMAGE_NAME
 
+# Limpiar imágenes "dangling"
+echo "Limpiando imágenes sin usar..."
+docker image prune -f
+
 echo "Actualización completada y contenedor reiniciado."
 
