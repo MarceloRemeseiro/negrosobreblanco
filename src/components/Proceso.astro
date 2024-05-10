@@ -3,7 +3,7 @@ const { titulo, texto, imagen, subtitulo } = Astro.props;
 ---
 
 <div class="grid rounded-md p-8 md:p-10">
-  <img src=`/svgs/${imagen}.svg` alt="" class="size-52" />
+  <img src=`/svgs/${imagen}.svg` alt="" class="size-52 mx-auto" />
   <p class="text-xl font-semibold">{titulo}</p>
   <h1 class="text-2xl font-semibold mb-4">{subtitulo}</h1>
 

@@ -5,27 +5,40 @@ import Caracteristicas2 from "../components/Caracteristicas2.astro";
 import Servicios from "../components/Servicios.astro";
 import Servicios2 from "../components/Servicios2.astro";
 
-import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
-import Hero2 from "../components/Hero2.astro";
 
 import Layout from "../layouts/Layout.astro";
 import Procesos from "../components/Procesos.astro";
+const ancho = "lg:w-[1200px] mx-auto";
 ---
 
 <Layout title="Negro sobre Blanco Agency">
-  <main>
-    <div class="bg-negro">
+  <main >
+    <div class="bg-negro ">
+      <div class={ancho}>
+
       <Hero />
     </div>
-    <div class="bg-blanco">
+
+    </div>
+    <div class="bg-blanco ">
+      <div class={ancho}>
+
       <Caracteristicas2 />
+      </div>
     </div>
     <div class="bg-negro">
-      <Servicios2 />
+      <div class={ancho}>
+
+        <Servicios2 />
+      </div>
     </div>
     <div class="bg-blanco">
+      <div class={ancho}>
+
       <Procesos />
+    </div>
+
     </div>
   </main>
 </Layout>

@@ -24,9 +24,10 @@ else
 fi
 
 # Actualizar el código fuente
-echo "Actualizando el código fuente desde Git..."
+echo "Cambiando de directorio"
 cd $SCRIPT_DIR
 git pull
+
 
 # Reconstruir la imagen Docker
 echo "Construyendo la nueva imagen Docker..."
