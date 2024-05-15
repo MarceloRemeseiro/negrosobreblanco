@@ -1,5 +1,5 @@
 ---
-const { titulo, texto } = Astro.props;
+const { titulo, texto, logo } = Astro.props;
 ---
 
 <div
@@ -9,9 +9,9 @@ const { titulo, texto } = Astro.props;
     class="absolute -top-8 bottom-auto left-auto right-4 flex h-16 w-16 flex-col items-center justify-center rounded-full border border-solid border-primario bg-white [box-shadow:#A3C1AD_0px_5px] lg:right-8"
   >
     <img
-      src="https://assets.website-files.com/63904f663019b0d8edf8d57c/639157f1a197859a6cd7f265_image%203.png"
+      src={logo}
       alt=""
-      class="relative z-10 inline-block h-8"
+      class="relative z-10 inline-block h-8 p-1"
     />
     <div
       class="absolute z-0 h-8 w-8 rounded-full border border-primario bg-primario"

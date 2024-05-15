@@ -19,17 +19,19 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-blanco">
+  <body class="bg-negro font-roboto">
     <Navbar />
     <div class="mt-16">
       <slot />
     </div>
-    <Footer />
+    
   </body>
 </html>
 <style is:global>
   :root {
   }
   html {
-  }
+    scroll-behavior: smooth;
+}
+
 </style>

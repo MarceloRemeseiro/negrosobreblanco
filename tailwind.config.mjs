@@ -11,6 +11,10 @@ export default {
 				'primario': '#A3C1AD',
 				'secundario': '#E8AFAF'
 			},
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+				'roboto': ['Roboto', 'sans-serif']
+			},
 		},
 	},
 	plugins: [],

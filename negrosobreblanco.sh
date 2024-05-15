@@ -27,6 +27,8 @@ fi
 echo "Cambiando de directorio"
 cd $SCRIPT_DIR
 git pull
+echo "PULL realizado"
+
 
 
 # Reconstruir la imagen Docker

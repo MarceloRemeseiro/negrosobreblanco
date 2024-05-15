@@ -1,35 +1,29 @@
+---
+import DatosContactos from "./DatosContactos.astro";
+---
 
 <footer class="bg-negro text-blanco">
   <div class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
     <div class="flex flex-row justify-between max-[767px]:flex-col max-[767px]:items-start">
       <div class="w-full max-w-[560px] max-[991px]:mr-4 max-[991px]:flex-initial max-[767px]:mr-0">
         <h2 class="text-3xl font-semibold text-white md:text-5xl">
-          <span class="text-primario">Copywriting</span> Webflow Dev Made Easy
+          <span>Negro sobre Blanco</span> 
         </h2>
       </div>
-      <div class="max-[991px]:ml-4 max-[991px]:flex-none max-[767px]:ml-0 max-[767px]:mt-8">
-        <!-- <div class="mb-4 flex max-w-[272px] items-start justify-start">
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/639973cafd61df1f2a234a2c_carbon_location-filled.svg" alt="" class="mr-3 inline-block w-6" />
-          <p>8502 Preston Rd. Inglewood, Maine 98380, USA</p>
-        </div> -->
-        <div class="mb-4 flex max-w-[272px] items-start justify-start">
-          <img src="https://assets.website-files.com/63904f663019b0d8edf8d57c/639973cbfd61dff0af234a64_Message.svg" alt="" class="mr-3 inline-block w-6" />
-          <p>info@negrosobreblanco.com</p>
-        </div>
-      </div>
+      <DatosContactos/>
     </div>
     <div class="mb-14 mt-16 w-full [border-bottom:1.7px_solid_rgb(0,_0,_0)]"></div>
     <div class="flex flex-row justify-between max-[991px]:items-center max-[767px]:flex-col max-[767px]:items-start max-[479px]:flex-col-reverse">
       <div class="text-center font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:py-1 max-[479px]:mb-4 sm:text-center">
-        <a href="#" class="inline-block py-1.5 pl-0 pr-6 font-normal text-blanco transition hover:text-primario sm:py-2 sm:pr-6 lg:pr-12">Nosotros</a>
-        <a href="#" class="inline-block py-1.5 pl-0 pr-6 font-normal text-blanco transition hover:text-primario sm:py-2 sm:pr-6 lg:pr-12">Features</a>
-        <a href="#" class="inline-block py-1.5 pl-0 pr-6 font-normal text-blanco transition hover:text-primario sm:py-2 sm:pr-6 lg:pr-12">Servicios</a>
-        <a href="#" class="inline-block py-1.5 pl-0 pr-6 font-normal text-blanco transition hover:text-primario sm:py-2 sm:pr-6 lg:pr-12">Procesos</a>
-        <a href="#" class="inline-block py-1.5 pl-0 pr-6 font-normal text-blanco transition hover:text-primario sm:py-2 sm:pr-6 lg:pr-12">Contacto</a>
+        <a href="#inicio" class="inline-block py-1.5 pl-0 pr-6 font-normal text-blanco transition hover:text-primario sm:py-2 sm:pr-6 lg:pr-12">Inicio</a>
+        <a href="#fortalezas" class="inline-block py-1.5 pl-0 pr-6 font-normal text-blanco transition hover:text-primario sm:py-2 sm:pr-6 lg:pr-12">Fortalezas</a>
+        <a href="#servicios" class="inline-block py-1.5 pl-0 pr-6 font-normal text-blanco transition hover:text-primario sm:py-2 sm:pr-6 lg:pr-12">Servicios</a>
+        <a href="#procesos" class="inline-block py-1.5 pl-0 pr-6 font-normal text-blanco transition hover:text-primario sm:py-2 sm:pr-6 lg:pr-12">Procesos</a>
+        <a href="/contacta" class="inline-block py-1.5 pl-0 pr-6 font-normal text-blanco transition hover:text-primario sm:py-2 sm:pr-6 lg:pr-12">Contacto</a>
       </div>
-      <div class="max-[991px]:flex-none">
-        <p class="text-blanco max-[479px]:text-sm">© Copyright 2024. Mabedev</p>
-      </div>
+    </div>
+    <div class="text-center mt-8">
+      <p class="text-blanco">© Copyright 2024. Mabedev</p>
     </div>
   </div>
 </footer>
