@@ -1,10 +1,23 @@
 #!/bin/bash
 
 # Nombres fijos
+REPOSITORIO="negrosobreblanco"
 CONTAINER_NAME=negrosobreblanco # Nombre del contenedor
 IMAGE_NAME=negrosobreblanco # Nombre de la imagen
 PORT=1000:8080  # Puerto de la aplicación
 SCRIPT_DIR=$(dirname "$0")  # Obtiene el directorio del script
+
+# Actualizar el código fuente
+echo "Actualizando el código fuente desde Git..."
+cd $SCRIPT_DIR
+if [[ -z "$GITHUB_TOKEN" ]]; then
+    echo "Error: El token de GitHub no está configurado."
+    exit 1
+fi
+
+# Usa el usuario y token directamente en la URL del repositorio
+git config --local credential.username marceloremeseiro
+git pull https://marceloremeseiro:${GITHUB_TOKEN}@github.com/MarceloRemeseiro/${REPOSITORIO}.git
 
 # Verifica si el contenedor está corriendo y detenerlo si es necesario
 if [ $(docker ps -q -f name=$CONTAINER_NAME) ]; then
@@ -23,13 +36,6 @@ else
     echo "No existe la imagen $IMAGE_NAME, se creará una nueva."
 fi
 
-# Actualizar el código fuente
-echo "Cambiando de directorio"
-cd $SCRIPT_DIR
-git pull
-echo "PULL realizado"
-
-
 
 # Reconstruir la imagen Docker
 echo "Construyendo la nueva imagen Docker..."
@@ -44,5 +50,3 @@ echo "Limpiando imágenes sin usar..."
 docker image prune -f
 
 echo "Actualización completada y contenedor reiniciado."
-
-
